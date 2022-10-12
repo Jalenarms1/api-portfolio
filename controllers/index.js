@@ -40,4 +40,10 @@ router.get("/admin/enter-proj", checkLogin, async (req, res) => {
     })
 })
 
+router.get("/admin/init-page", (req, res) => {
+    res.render("admin-init", {
+        isLoggedIn: req.session.isLoggedIn
+    })
+})
+
 module.exports = router;

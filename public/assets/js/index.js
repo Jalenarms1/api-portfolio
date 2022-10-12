@@ -8,6 +8,35 @@ const imageInput = document.querySelector("#image-input");
 const title = document.querySelector("#proj-title");
 const link = document.querySelector("#proj-link");
 const description = document.querySelector("#proj-descr");
+const initBtn = document.querySelector("#submit-admin-init");
+const initUsername = document.querySelector("#username-init-input");
+const initEmail = document.querySelector("#email-init-input");
+const initPassword = document.querySelector("#password-init-input");
+
+
+const submitInit = async (e) => {
+    try{
+        e.preventDefault();
+        console.log(initUsername.value, initEmail.value, initPassword);
+
+        let response = await fetch("/api/admin/init", {
+            method: 'POST',
+            body: JSON.stringify({
+                username: initUsername.value,
+                email: initEmail.value,
+                password: initPassword.value
+            }),
+            headers: {"Content-Type": "application/json"}
+        })
+
+        if(response.ok){
+            location.replace("/admin/enter-proj")
+        }
+
+    }catch(err){
+        console.log(err);
+    }
+}
 
 
 const submitLogin = async (e) => {
@@ -21,7 +50,7 @@ const submitLogin = async (e) => {
         })
 
         if(response.ok){
-            location.replace("/")
+            location.replace("/admin/enter-proj")
         }
 
     }catch(err){
@@ -85,4 +114,8 @@ if(logoutBtn){
 
 if(addProjBtn){
     addProjBtn.addEventListener("click", submitProject);
+}
+
+if(initBtn){
+    initBtn.addEventListener("click", submitInit);
 }

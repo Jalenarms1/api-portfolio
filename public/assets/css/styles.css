@@ -3,10 +3,13 @@
     
 }
 
+html{
+    
+}
+
 body{
     margin: 0;
     padding: 0;
-    height: 100%;
     background-image: linear-gradient(rgba(9, 9, 71, 0.85), rgba(0, 0, 0, .85)),
                 url("https://coolbackgrounds.io/images/unsplash/samuel-zeller-medium-b832fe04.jpg");
     background-repeat: no-repeat;
@@ -26,6 +29,7 @@ body{
 .proj-container{
     width: 80%;
     margin: auto;
+    overflow-x: auto;
     /* background-image: linear-gradient(rgb(15, 28, 95), rgb(171, 213, 255)); */
     background-color: #2f274b;
     box-shadow: 0 0 5px inset black;
