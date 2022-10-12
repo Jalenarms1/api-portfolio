@@ -12,6 +12,7 @@ const initBtn = document.querySelector("#submit-admin-init");
 const initUsername = document.querySelector("#username-init-input");
 const initEmail = document.querySelector("#email-init-input");
 const initPassword = document.querySelector("#password-init-input");
+const delBtn = document.querySelectorAll(".del-btn");
 
 
 const submitInit = async (e) => {
@@ -101,10 +102,32 @@ const submitProject = async () => {
         
         reader.readAsDataURL(image);
 
+    }catch(err){
+        console.log(err);
+    }
+}
+
+const delProject = async (e) => {
+    try{
+        let response = await fetch(`/api/admin/project/del/${e.target.id}`, {
+            method: 'DELETE',
+            body: {}
+        })
+
+        console.log(response);
+        if(response.ok){
+            location.replace("/admin/view");
+        }
 
     }catch(err){
         console.log(err);
     }
+}
+
+if(delBtn){
+    delBtn.forEach(button => {
+        button.addEventListener("click", delProject);
+    })
 }
 
 

@@ -28,6 +28,28 @@ router.get("/", async (req, res) => {
 
 })
 
+router.get("/admin/view", checkLogin, async (req, res) => {
+    try{
+        console.log("hit");
+        let allProjects = await Project.findAll();
+
+        let projects = allProjects.map(item => {
+            return item.get({plain: true})
+        })
+
+
+        res.render("admin-view", {
+            isLoggedIn: req.session.isLoggedIn,
+            projects
+    
+        })
+
+    }catch(err){
+        console.log(err);
+        res.json(err)
+    }
+})
+
 router.get("/admin/enter", (req, res) => {
     res.render("admin-login", {
         isLoggedIn: req.session.isLoggedIn

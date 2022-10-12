@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <title>Document</title>
 </head>
@@ -14,20 +17,43 @@
             <div class="container-fluid d-flex justify-content-end">
                 {{#unless isLoggedIn}}
                 <a class="navbar-brand text-white cst-link px-3" href="https://github.com/jalenarms1" target="_blank">Github</a>
-                <a class="navbar-brand text-white cst-link px-3" href="#" target="_blank">Contact</a>
+                <a href="#" class="navbar-brand text-white cst-link px-3" data-bs-toggle="modal"  data-bs-target="#contactModal">Contact</a>
                 {{/unless}}
                 {{#if isLoggedIn}}
                 <a class="navbar-brand text-white cst-link px-3" href="/admin/enter-proj">Add new project</a>
+                <a class="navbar-brand text-white cst-link px-3" href="/admin/view">View Projects</a>
                 <a class="navbar-brand text-white cst-link px-3" href="#" id="logout-btn">Logout</a>
                 {{/if}}
 
             </div>
         </nav>
+        
+        
 
-        <h1 class="txt-shadow ">Jalen Arms</h1>
-        <h4 class="txt-shadow ">Software Developer in the Making.</h4>
-        <p class="txt-shadow ">Currently enrolled in the University of Arizona's coding bootcamp (grad-date: 12/6/2022)</p>
+        
+        <h1 class="text-light">Jalen Arms</h1>
+        <h4 class="text-light">Software Developer in the Making.</h4>
+        <p class="text-light">Currently enrolled in the University of Arizona's coding bootcamp (grad-date: 12/6/2022)</p>
      
+    </div>
+    <div class="modal fade" id="contactModal">
+        <div class="modal-dialog modal-dailog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Contact Info</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="wrap-phoneNumber d-flex flex-wrap">
+                        <p><strong>Phone number: </strong></p>
+                        <p>614-596-8904</p>
+                    </div>
+                    <div class="wrap-email d-flex flex-wrap">
+                        <p><strong>Email: </strong></p>
+                        <p><a href="mailto:jalenarms@outlook.com">Jalenarms@outlook.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     {{{body}}}

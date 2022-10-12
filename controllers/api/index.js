@@ -59,7 +59,6 @@ router.post("/admin/check", async (req, res) => {
 
         req.session.save(() => {
             req.session.isLoggedIn = true,
-            req.session.user_id = checkUser.id
 
             res.render("home", {
                 isLoggedIn: req.session.isLoggedIn
@@ -111,6 +110,23 @@ router.post("/admin/new-proj", async (req, res) => {
     }catch(err){
         console.log(err);
         res.json(err);
+    }
+})
+
+router.delete("/admin/project/del/:id", async (req, res) => {
+    try{
+        let delProject = await Project.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+
+        console.log(delProject);
+        res.json(delProject)
+
+    }catch(err){
+        console.log(err);
+        res.status(500).json(err);
     }
 })
 

@@ -1,0 +1,17 @@
+<div class="row justify-content-center">
+    {{#each projects as |project|}}
+        <div class="card col-4 mx-2 my-2">
+            <img src={{project.image}} class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{project.title}}</h5>
+                <p class="card-text">{{project.description}}</p>
+                <div class="wrap-btn d-flex justify-content-between">
+                    <a href={{project.link}} target="_blank" class="btn btn-primary">Test Live</a>
+                    
+                    <button id={{project.id}} class="btn btn-close bg-danger del-btn"></button>
+                </div>
+                
+            </div>
+        </div>
+    {{/each}}
+</div>
