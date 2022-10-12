@@ -3,12 +3,11 @@ const router = require("express").Router();
 const {User, Project} = require("../../models");
 const cloudinary = require("cloudinary").v2;
 
-cloudinary.config({
-    cloud_name: process.env.CLOUD_NAME,
-    api_key: "132219615124213",
-    api_secret: process.env.API_SECRET,
-    secure: true
-})
+cloudinary.config({ 
+    cloud_name: 'dvlhy87zl', 
+    api_key: '132219615124213', 
+    api_secret: 'jaTgCwIuhsA_6rGrxRqG7xVh71U' 
+  });
 
 const options = {
     use_filename: true,
