@@ -92,6 +92,10 @@ const submitProject = async () => {
                 }),
                 headers: {"Content-Type": "application/json"}
             })
+
+            if(response.ok){
+                location.replace("/");
+            }
             
         })
         
