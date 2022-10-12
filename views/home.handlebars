@@ -1,20 +1,11 @@
 <div class="proj-container d-flex flex-column justify-content-center rounded">
-    <div class="heading-wrap w-50 text-center mt-4 mb-3 mx-auto">
+    <div class="heading-wrap w-50 text-center mt-4 mb-3 mx-auto border-bottom">
         <h1 class="pb-4 text-light">Project Catalog</h1>
-        <div class="modal w-25" tabindex="-1" id="contactModal">
-            <div class="modal-dailog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3>Contact Info</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     
-    <div id="proj-coll" class="wrap-proj-sec d-flex pb-5">
+    <div id="proj-coll" class="wrap-proj-sec d-flex  pb-5">
         {{#each projects as |project|}}
-        <div class="card col-11 mx-2 my-2">
+        <div class="card col-lg-11 col-md-10 col-sm-8 col-xs-5 mx-2 my-2">
             <img src={{project.image}} class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{project.title}}</h5>

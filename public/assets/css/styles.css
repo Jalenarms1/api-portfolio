@@ -17,17 +17,22 @@ body{
     height: 1000px;
 }
 
-h1, h2, h3, h4, p{
-    font-family: 'Noto Sans Mono', monospace;
+h1, h2, h3, h4{
+    font-family: 'Josefin Sans', sans-serif;}
+
+p, a{
+    font-family: 'Dosis', sans-serif;
 }
-
-
 
 .wrap-name{
     background-color: #2f274b;
     box-shadow: 0 0 5px inset black;
+}
 
-
+.details-bg{
+    background-color: #c9c9c9;
+    color: rgb(6, 39, 66);
+    box-shadow: 0 0 5px inset black;
 }
 
 .cst-jmbo-bg{
