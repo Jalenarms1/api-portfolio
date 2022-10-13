@@ -4,7 +4,6 @@
 }
 
 html{
-    height: fit-content;
 }
 
 body{
@@ -14,7 +13,9 @@ body{
                 url("https://coolbackgrounds.io/images/unsplash/samuel-zeller-medium-b832fe04.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 1000px;
+    /* height: 1000px; */
+    height: fit-content;
+
 }
 
 h1, h2, h3, h4{
@@ -39,19 +40,17 @@ p, a{
     background-color: rgb(50, 41, 70);
 }
 .proj-container{
-    width: 100%;
+    width: 80%;
     margin: auto;
-    /* overflow-x: scroll; */
-    /* background-image: linear-gradient(rgb(15, 28, 95), rgb(171, 213, 255)); */
     background-color: #2f274b;
     box-shadow: 0 0 5px inset black;
     margin-bottom: 5%;
+    height: fit-content;
 }
 
 .wrap-proj-sec{
     margin: auto;
     overflow-x: scroll;
-    scrollbar-width: none;
     width: 600px;
     margin-bottom: 5%;
 }
