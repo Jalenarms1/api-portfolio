@@ -39,7 +39,7 @@ p, a{
     background-color: rgb(50, 41, 70);
 }
 .proj-container{
-    width: 80%;
+    width: 100%;
     margin: auto;
     /* overflow-x: scroll; */
     /* background-image: linear-gradient(rgb(15, 28, 95), rgb(171, 213, 255)); */
@@ -52,7 +52,7 @@ p, a{
     margin: auto;
     overflow-x: scroll;
     scrollbar-width: none;
-    width: 450px;
+    width: 600px;
     margin-bottom: 5%;
 }
 
