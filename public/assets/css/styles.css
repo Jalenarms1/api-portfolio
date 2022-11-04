@@ -40,7 +40,7 @@ p, a{
     background-color: rgb(50, 41, 70);
 }
 .proj-container{
-    width: 80%;
+    width: 90%;
     margin: auto;
     background-color: #2f274b;
     box-shadow: 0 0 5px inset black;
@@ -48,10 +48,15 @@ p, a{
     height: fit-content;
 }
 
-.wrap-proj-sec{
+.cst-wrap{
+    width: 90%;
     margin: auto;
-    overflow-x: scroll;
-    width: 60%;
+
+}
+
+.wrap-proj-sec{
+    /* overflow-x: scroll; */
+    width: 100%;
     margin-bottom: 5%;
 }
 
