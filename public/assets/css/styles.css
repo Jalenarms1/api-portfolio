@@ -64,6 +64,7 @@ p, a{
     /* overflow-x: scroll; */
     width: 100%;
     margin-bottom: 5%;
+    margin: auto;
 }
 
 
@@ -78,7 +79,7 @@ p, a{
 
 @media screen and (max-width: 1130px) {
     .cst-flex-basis{
-        width: 40%;
+        width: 45%;
     }
 }
 
