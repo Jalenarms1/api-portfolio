@@ -3,7 +3,7 @@
         <h1 class="pb-4 text-light">Project Catalog</h1>
     </div>
     
-    <div id="proj-coll" class="wrap-proj-sec d-flex flex-wrap m-auto pb-5 align-items-stretch">
+    <div id="proj-coll" class="wrap-proj-sec d-flex flex-wrap m-auto pb-5">
         <div class="mx-5 cst-wrap d-flex flex-wrap"> 
             {{#each projects as |project|}}
             <div class="card col-lg-3 col-md-5 col-sm-10 col-xs-8 mx-4 my-2">
@@ -11,10 +11,10 @@
                 <div class="card-body">
                     <h5 class="card-title">{{project.title}}</h5>
                     <p class="card-text">{{project.description}}</p>
-                    <div class="wrap-btn d-flex justify-content-between">
-                        <a href={{project.link}} target="_blank" class="btn btn-primary">Test Live</a>
-                    </div>
                     
+                </div>
+                <div class="wrap-btn d-flex justify-content-between p-2">
+                    <a href={{project.link}} target="_blank" class="btn btn-primary">Test Live</a>
                 </div>
             </div>
             {{/each}}
